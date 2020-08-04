@@ -1,7 +1,14 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany} from '@loopback/repository';
+import {MenuChoice} from './menu-choice.model';
 
 @model({settings: {strict: false}})
 export class MenuOption extends Entity {
+  @property({
+    type: 'string',
+    id: true,
+    generated: true,
+  })
+  id?: string;
   @property({
     type: 'number',
     required: true,
@@ -19,6 +26,13 @@ export class MenuOption extends Entity {
   })
   messages?: string;
 
+  @property({
+    type: 'string',
+  })
+  menuItemId?: string;
+
+  @hasMany(() => MenuChoice)
+  menuChoices: MenuChoice[];
   // Define well-known properties here
 
   // Indexer property to allow additional data

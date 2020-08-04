@@ -5,3 +5,6 @@ export * from './caterer-profile-menu-item.controller';
 export * from './oauth2.controller';
 export * from './user-address.controller';
 export * from './user-login.controller';
+export * from './menu-category-items.controller';
+export * from './menu-item-menu-option.controller';
+export * from './menu-option-menu-choice.controller';

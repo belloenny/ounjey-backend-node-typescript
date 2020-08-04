@@ -1,5 +1,5 @@
-import {Entity, model, property, hasMany} from '@loopback/repository';
-import {MenuItem} from './menu-item.model';
+import {Entity, hasMany, model, property} from '@loopback/repository';
+import {MenuItem, MenuItemWithRelations} from './menu-item.model';
 
 @model({settings: {strict: false}})
 export class MenuCategory extends Entity {
@@ -36,6 +36,7 @@ export class MenuCategory extends Entity {
 
 export interface MenuCategoryRelations {
   // describe navigational properties here
+  menuItems?: MenuItemWithRelations[];
 }
 
 export type MenuCategoryWithRelations = MenuCategory & MenuCategoryRelations;

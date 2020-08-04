@@ -4,6 +4,12 @@ import {Entity, model, property} from '@loopback/repository';
 export class MenuChoice extends Entity {
   @property({
     type: 'string',
+    id: true,
+    generated: true,
+  })
+  id?: string;
+  @property({
+    type: 'string',
     required: true,
   })
   name: string;
@@ -24,6 +30,10 @@ export class MenuChoice extends Entity {
   })
   useCheckboxes?: boolean;
 
+  @property({
+    type: 'string',
+  })
+  menuOptionId?: string;
   // Define well-known properties here
 
   // Indexer property to allow additional data

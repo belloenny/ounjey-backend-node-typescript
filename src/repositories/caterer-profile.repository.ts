@@ -59,6 +59,10 @@ export class CatererProfileRepository extends DefaultCrudRepository<
       'addresses',
       addressRepositoryGetter,
     );
+    this.registerInclusionResolver(
+      'addresses',
+      this.addresses.inclusionResolver,
+    );
     this.menuCategories = this.createHasManyRepositoryFactoryFor(
       'menuCategories',
       menuCategoryRepositoryGetter,
@@ -66,10 +70,6 @@ export class CatererProfileRepository extends DefaultCrudRepository<
     this.registerInclusionResolver(
       'menuCategories',
       this.menuCategories.inclusionResolver,
-    );
-    this.registerInclusionResolver(
-      'addresses',
-      this.addresses.inclusionResolver,
     );
   }
 }

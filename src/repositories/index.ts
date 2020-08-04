@@ -5,3 +5,5 @@ export * from './user-credentials.repository';
 export * from './user-identity.repository';
 export * from './user.repository';
 export * from './caterer-profile.repository';
+export * from './menu-choice.repository';
+export * from './menu-option.repository';

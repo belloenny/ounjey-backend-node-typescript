@@ -22,11 +22,9 @@ export class OunjeyApp extends BootMixin(
   constructor(options: ApplicationConfig = {}) {
     super(options);
     // Set up the custom sequence
-    this.component(AuthenticationComponent);
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //@ts-ignore
-    this.component(AuthorizationComponent);
     this.sequence(MySequence);
+    this.component(AuthenticationComponent);
+    this.component(AuthorizationComponent);
     this.component(JWTAuthenticationComponent);
     this.component(PassportAuthComponent);
     // Set up default home page
