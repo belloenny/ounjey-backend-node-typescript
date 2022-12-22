@@ -77,7 +77,7 @@
     "cookie-parser": "^1.4.5",
     "cookie-session": "^1.4.0",
     "helmet": "^3.23.3",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.19",
     "loopback-connector-mongodb": "^5.2.3",
     "passport": "^0.4.1",
